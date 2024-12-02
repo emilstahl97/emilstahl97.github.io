@@ -8,23 +8,23 @@ import { useInView } from 'react-intersection-observer'
 
 const projects = [
   {
-    title: "Network Monitoring Dashboard",
-    description: "A real-time dashboard for monitoring network performance and detecting anomalies.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Node.js", "WebSocket", "D3.js"],
+    title: "Open vSwitch with Coflow-Aware Prediction",
+    description: "Performance benchmark of Open vSwitch with perfect knowledge of future flows",
+    image: "/images/ovs.png",
+    tags: ["Master's Thesis", "Open vSwitch", "Python", "OpenShift", "XDP", "Networking"],
     link: "#"
   },
   {
     title: "Distributed File System",
     description: "A scalable and fault-tolerant distributed file system implemented from scratch.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/distributed-fs.png",
     tags: ["Go", "gRPC", "Raft Consensus", "Distributed Systems"],
     link: "#"
   },
   {
     title: "Secure Chat Application",
     description: "An end-to-end encrypted chat application with perfect forward secrecy.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/secure-chat.png",
     tags: ["Python", "Cryptography", "WebRTC", "React"],
     link: "#"
   }
