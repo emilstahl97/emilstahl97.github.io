@@ -9,14 +9,14 @@ import { useInView } from 'react-intersection-observer'
 const projects = [
   {
     title: "Open vSwitch with Coflow-Aware Prediction",
-    description: "Performance benchmark of Open vSwitch with perfect knowledge of future flows",
+    description: "Master's Thesis benchmarking the performance of Open vSwitch with perfect knowledge of future flows",
     image: "/images/ovs.png",
     tags: ["Master's Thesis", "Open vSwitch", "Python", "OpenShift", "XDP", "Networking"],
     link: "#"
   },
   {
-    title: "Distributed File System",
-    description: "A scalable and fault-tolerant distributed file system implemented from scratch.",
+    title: "Performance Analysis of the FRRouting Route Server",
+    description: "Bachelor's Thesis researching the performance of FRRouting with a set of experiments using ExaBGP and Wireshark",
     image: "/images/distributed-fs.png",
     tags: ["Go", "gRPC", "Raft Consensus", "Distributed Systems"],
     link: "#"
