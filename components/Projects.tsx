@@ -12,21 +12,21 @@ const projects = [
     description: "Master's Thesis benchmarking the performance of Open vSwitch with perfect knowledge of future flows",
     image: "/images/ovs.png",
     tags: ["Master's Thesis", "Open vSwitch", "Python", "OpenShift", "XDP", "Networking"],
-    link: "#"
+    link: "https://github.com/emilstahl97/Open-vSwitch-with-Coflow-Aware-Prediction"
   },
   {
     title: "Performance Analysis of the FRRouting Route Server",
     description: "Bachelor's Thesis researching the performance of FRRouting with a set of experiments using ExaBGP and Wireshark",
     image: "/images/FRR.png",
     tags: ["Bachelor's Thesis", "BGP", "FRRouting", "Wireshark", "ExaBGP", "Python", "Bash", "PBPG Parser"],
-    link: "#"
+    link: "https://github.com/emilstahl97/Performance-analysis-of-the-FRRouting-Route-Server"
   },
   {
     title: "Network Security Setup",
     description: "Designed and deployed a secure network infrastructure with integrated services like FreeIPA, FreeRadius, NextCloud, OpenVPN, and Snort using Docker. Established site-to-site VPNs for seamless communication and implemented proactive threat monitoring.",
     image: "/images/EP2520.png",
     tags: ["FreeIPA", "FreeRadius", "NextCloud", "OpenVPN", "Snort", "Docker", "Networking"],
-    link: "#"
+    link: "https://github.com/emilstahl97/Building-Networked-Systems-Security-EP2520"
   }
 ]
 
