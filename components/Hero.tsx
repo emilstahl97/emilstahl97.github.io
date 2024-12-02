@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const roles = [
   "Fullstack Engineer",
@@ -66,13 +67,17 @@ export default function Hero() {
               </motion.p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <Button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10">
-                    View Projects
+                  <Button asChild className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10">
+                    <Link href="#projects">
+                      View Projects
+                    </Link>
                   </Button>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <Button variant="outline" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-primary/10 hover:bg-primary/20 md:py-4 md:text-lg md:px-10">
-                    Contact Me
+                  <Button asChild variant="outline" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-primary/10 hover:bg-primary/20 md:py-4 md:text-lg md:px-10">
+                    <Link href="#contact">
+                      Contact Me
+                    </Link>
                   </Button>
                 </div>
               </div>
