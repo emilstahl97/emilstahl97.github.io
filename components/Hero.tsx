@@ -8,6 +8,7 @@ import Link from 'next/link'
 
 const roles = [
   "Fullstack Engineer",
+  "Distributed Systems",
   "Network Specialist",
   "Backend Developer",
   "Cloud Architect"
