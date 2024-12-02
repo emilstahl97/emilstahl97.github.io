@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Emil Ståhl - Fullstack Engineer',
   description: 'Portfolio of Emil Ståhl, a fullstack computer engineer specializing in networking',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
