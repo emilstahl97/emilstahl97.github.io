@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Performance Analysis of the FRRouting Route Server",
     description: "Bachelor's Thesis researching the performance of FRRouting with a set of experiments using ExaBGP and Wireshark",
-    image: "/images/distributed-fs.png",
+    image: "/images/FRR.png",
     tags: ["Bachelor's Thesis", "BGP", "FRRouting", "Wireshark", "ExaBGP", "Python", "Bash", "PBPG Parser"],
     link: "#"
   },
