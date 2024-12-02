@@ -22,10 +22,10 @@ const projects = [
     link: "#"
   },
   {
-    title: "Secure Chat Application",
-    description: "An end-to-end encrypted chat application with perfect forward secrecy.",
-    image: "/images/secure-chat.png",
-    tags: ["Python", "Cryptography", "WebRTC", "React"],
+    title: "Network Security Setup",
+    description: "Designed and deployed a secure network infrastructure with integrated services like FreeIPA, FreeRadius, NextCloud, OpenVPN, and Snort using Docker. Established site-to-site VPNs for seamless communication and implemented proactive threat monitoring.",
+    image: "/images/EP2520.png",
+    tags: ["FreeIPA", "FreeRadius", "NextCloud", "OpenVPN", "Snort", "Docker", "Networking"],
     link: "#"
   }
 ]
