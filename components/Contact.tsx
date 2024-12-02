@@ -1,10 +1,9 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Github, Linkedin } from 'lucide-react'
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -21,7 +20,7 @@ export default function Contact() {
             Get in Touch
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Interested in working together? Feel free to reach out for collaborations or just a friendly hello.
+            Feel free to connect with me on LinkedIn or check out my projects on GitHub.
           </p>
         </div>
 
@@ -31,23 +30,29 @@ export default function Contact() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <form className="grid grid-cols-1 gap-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-              <Input type="text" name="name" id="name" autoComplete="name" required className="mt-1" />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <Input type="email" name="email" id="email" autoComplete="email" required className="mt-1" />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-              <Textarea name="message" id="message" rows={4} required className="mt-1" />
-            </div>
-            <div>
-              <Button type="submit" className="w-full">Send Message</Button>
-            </div>
-          </form>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              className="flex items-center gap-2"
+              size="lg"
+            >
+              <a href="https://linkedin.com/in/emil-ståhl-6bb423b7" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+                Connect on LinkedIn
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="flex items-center gap-2"
+              size="lg"
+            >
+              <a href="https://github.com/emilstahl97" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+                Follow on GitHub
+              </a>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>
