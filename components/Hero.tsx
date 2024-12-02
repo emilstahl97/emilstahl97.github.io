@@ -45,7 +45,7 @@ export default function Hero() {
     <div className="relative bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <main className="mt-4 mx-auto max-w-7xl px-4 sm:mt-6 md:mt-8 lg:mt-10 lg:px-8 xl:mt-14">
             <div className="sm:text-center lg:text-left bg-white/80 backdrop-blur-sm p-8 rounded-lg lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
               <motion.h1 
                 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
