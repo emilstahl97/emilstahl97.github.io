@@ -4,7 +4,7 @@ export const courses = [
       code: "DD101N",
       grade: "P",
       semester: "Spring 2017",
-      category: "Core"
+      category: "Computer Science"
     },
     {
       name: "Basic Course in Mathematics",
@@ -18,14 +18,14 @@ export const courses = [
       code: "ID1018",
       grade: "D",
       semester: "Spring 2018",
-      category: "Core"
+      category: "Computer Science"
     },
     {
       name: "Computer Hardware Engineering",
       code: "IS1200",
       grade: "D",
       semester: "Spring 2018",
-      category: "Hardware"
+      category: "Systems"
     },
     {
       name: "Discrete Mathematics",
@@ -39,14 +39,14 @@ export const courses = [
       code: "ID1020",
       grade: "E",
       semester: "Fall 2018",
-      category: "Core"
+      category: "Computer Science"
     },
     {
       name: "Industrial Management, Basic Course",
       code: "ME1003",
       grade: "C",
       semester: "Spring 2019",
-      category: "Management"
+      category: "Electives"
     },
     {
       name: "Networks and Communication",
@@ -60,14 +60,14 @@ export const courses = [
       code: "IV1303",
       grade: "P",
       semester: "Spring 2019",
-      category: "Software Development"
+      category: "Computer Science"
     },
     {
       name: "Project in Information and Communication Technology",
       code: "II1305",
       grade: "P",
       semester: "Spring 2019",
-      category: "Project"
+      category: "Computer Science"
     },
     {
       name: "Distributed Systems, Basic Course",
@@ -88,21 +88,21 @@ export const courses = [
       code: "DD1351",
       grade: "E",
       semester: "Spring 2020",
-      category: "Core"
+      category: "Computer Science"
     },
     {
       name: "Concurrent Programming",
       code: "ID1217",
       grade: "A",
       semester: "Spring 2020",
-      category: "Programming"
+      category: "Computer Science"
     },
     {
       name: "Sustainable Development, ICT and Innovation",
       code: "AG1815",
       grade: "B",
       semester: "Spring 2020",
-      category: "Elective"
+      category: "Electives"
     },
     {
       name: "Algebra and Geometry",
@@ -116,14 +116,14 @@ export const courses = [
       code: "IE1206",
       grade: "C",
       semester: "Spring 2020",
-      category: "Hardware"
+      category: "Systems"
     },
     {
       name: "Introduction to Computer Security",
       code: "IV1013",
       grade: "B",
       semester: "Spring 2020",
-      category: "Security"
+      category: "Networking"
     },
     {
       name: "Calculus in One Variable",
@@ -144,7 +144,7 @@ export const courses = [
       code: "ID2216",
       grade: "A",
       semester: "Spring 2021",
-      category: "Mobile Development"
+      category: "Computer Science"
     },
     {
       name: "Ubiquitous Computing",
@@ -158,35 +158,35 @@ export const courses = [
       code: "ID2207",
       grade: "D",
       semester: "Fall 2021",
-      category: "Software Engineering"
+      category: "Computer Science"
     },
     {
       name: "Data-Intensive Computing",
       code: "ID2221",
       grade: "A",
       semester: "Fall 2021",
-      category: "Big Data"
+      category: "Computer Science"
     },
     {
       name: "Data Mining",
       code: "ID2222",
       grade: "C",
       semester: "Spring 2022",
-      category: "Big Data"
+      category: "Computer Science"
     },
     {
       name: "Scalable Machine Learning and Deep Learning",
       code: "ID2223",
       grade: "A",
       semester: "Spring 2022",
-      category: "AI/ML"
+      category: "Computer Science"
     },
     {
       name: "Building Networked Systems Security",
       code: "EP2520",
       grade: "A",
       semester: "Spring 2022",
-      category: "Security"
+      category: "Networking"
     },
     {
       name: "Internetworking",
@@ -200,7 +200,7 @@ export const courses = [
       code: "II2202",
       grade: "B",
       semester: "Fall 2022",
-      category: "Research"
+      category: "Electives"
     },
     {
       name: "Mobile Networks and Services",
@@ -221,7 +221,7 @@ export const courses = [
       code: "LS1600",
       grade: "P",
       semester: "Spring 2023",
-      category: "Elective"
+      category: "Electives"
     },
     {
       name: "Software Defined Networking and Network Functions Virtualization",
@@ -235,6 +235,7 @@ export const courses = [
       code: "DA240X",
       grade: "P",
       semester: "Fall 2024",
-      category: "Thesis"
+      category: "Degree Project"
     }
-  ];  
+  ];
+  
