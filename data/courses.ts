@@ -42,7 +42,7 @@ export const courses = [
       category: "Computer Science"
     },
     {
-      name: "Industrial Management, Basic Course",
+      name: "Industrial Management",
       code: "ME1003",
       grade: "C",
       semester: "Spring 2019",
@@ -70,7 +70,7 @@ export const courses = [
       category: "Computer Science"
     },
     {
-      name: "Distributed Systems, Basic Course",
+      name: "Distributed Systems",
       code: "ID2201",
       grade: "A",
       semester: "Fall 2019",
