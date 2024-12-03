@@ -4,44 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-
-const courses = [
-  {
-    name: "Introduction to Computer Science",
-    code: "CS101",
-    grade: "A",
-    semester: "Fall 2020",
-    category: "Core"
-  },
-  {
-    name: "Data Structures and Algorithms",
-    code: "CS201",
-    grade: "A-",
-    semester: "Spring 2021",
-    category: "Core"
-  },
-  {
-    name: "Computer Networks",
-    code: "CS301",
-    grade: "A",
-    semester: "Fall 2021",
-    category: "Networking"
-  },
-  {
-    name: "Database Systems",
-    code: "CS401",
-    grade: "B+",
-    semester: "Spring 2022",
-    category: "Systems"
-  },
-  {
-    name: "Operating Systems",
-    code: "CS402",
-    grade: "A-",
-    semester: "Fall 2022",
-    category: "Systems"
-  }
-]
+import { courses } from '@/data/courses'
 
 export default function Courses() {
   const [ref, inView] = useInView({
