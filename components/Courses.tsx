@@ -4,13 +4,42 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { useState } from 'react'
 import { courses } from '@/data/courses'
+
+type SortKey = 'grade' | 'category' | 'semester'
 
 export default function Courses() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+
+  const [sortKey, setSortKey] = useState<SortKey>('semester')
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc')
+
+  const gradeOrder = ['A', 'B', 'C', 'D', 'E', 'P']
+
+  const sortedCourses = [...courses].sort((a, b) => {
+    if (sortKey === 'grade') {
+      return (gradeOrder.indexOf(a.grade) - gradeOrder.indexOf(b.grade)) * (sortOrder === 'asc' ? 1 : -1)
+    } else if (sortKey === 'category') {
+      return a.category.localeCompare(b.category) * (sortOrder === 'asc' ? 1 : -1)
+    } else {
+      // Default sort by semester
+      return a.semester.localeCompare(b.semester) * (sortOrder === 'asc' ? 1 : -1)
+    }
+  })
+
+  const handleSort = (key: SortKey) => {
+    if (sortKey === key) {
+      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortKey(key)
+      setSortOrder('asc')
+    }
+  }
 
   return (
     <section className="py-12 bg-gray-50" id="courses" ref={ref}>
@@ -25,9 +54,30 @@ export default function Courses() {
           </p>
         </div>
 
+        <div className="mt-6 flex justify-center gap-4">
+          <Button
+            variant={sortKey === 'grade' ? 'default' : 'outline'}
+            onClick={() => handleSort('grade')}
+          >
+            Sort by Grade {sortKey === 'grade' && (sortOrder === 'asc' ? '↑' : '↓')}
+          </Button>
+          <Button
+            variant={sortKey === 'category' ? 'default' : 'outline'}
+            onClick={() => handleSort('category')}
+          >
+            Sort by Category {sortKey === 'category' && (sortOrder === 'asc' ? '↑' : '↓')}
+          </Button>
+          <Button
+            variant={sortKey === 'semester' ? 'default' : 'outline'}
+            onClick={() => handleSort('semester')}
+          >
+            Sort by Semester {sortKey === 'semester' && (sortOrder === 'asc' ? '↑' : '↓')}
+          </Button>
+        </div>
+
         <div className="mt-10">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {courses.map((course, index) => (
+            {sortedCourses.map((course, index) => (
               <motion.div
                 key={course.code}
                 initial={{ opacity: 0, y: 50 }}
@@ -44,6 +94,7 @@ export default function Courses() {
                   <CardContent>
                     <div className="space-y-2">
                       <p className="text-sm text-gray-500">Course Code: {course.code}</p>
+                      <p className="text-sm text-gray-500">{course.semester}</p>
                       <Badge variant="outline">{course.category}</Badge>
                     </div>
                   </CardContent>
