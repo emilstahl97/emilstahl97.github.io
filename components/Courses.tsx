@@ -77,16 +77,18 @@ export default function Courses() {
               >
                 <Card className="h-full flex flex-col transition-transform duration-300 hover:scale-105">
                   <CardHeader>
-                    <CardTitle className="flex justify-between items-start">
-                      <span>{course.name}</span>
-                      <Badge variant="secondary">{course.grade}</Badge>
+                    <CardTitle className="flex justify-between items-start gap-2">
+                      <span className="text-lg font-bold">{course.name}</span>
+                      <Badge variant="secondary" className="shrink-0">
+                        {course.grade}
+                      </Badge>
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2">
-                      <p className="text-sm text-gray-500">Course Code: {course.code}</p>
-                      <Badge variant="outline">{course.category}</Badge>
-                    </div>
+                  <CardContent className="flex-grow flex flex-col justify-between">
+                    <p className="text-sm text-gray-500 mb-4">Course Code: {course.code}</p>
+                    <Badge variant="outline" className="w-fit">
+                      {course.category}
+                    </Badge>
                   </CardContent>
                 </Card>
               </motion.div>
