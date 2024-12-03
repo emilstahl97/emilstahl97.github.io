@@ -236,6 +236,29 @@ export const courses = [
       grade: "P",
       semester: "Fall 2024",
       category: "Degree Project"
-    }
+    },
+    {
+        name: "Degree Project in Information and Communication Technology",
+        code: "IA150X",
+        grade: "P",
+        semester: "Spring 2021",
+        category: "Degree Project"
+    },
+    {
+        name: "Engineering Skills for ICT",
+        code: "II1304",
+        grade: "P",
+        semester: "Various",
+        category: "Electives",
+        note: "Partially completed (Robot Project and Career Planning)"
+    },
+    {
+        name: "Distributed Artificial Intelligence and Intelligent Agents",
+        code: "ID2209",
+        grade: "P",
+        semester: "Spring 2021",
+        category: "Systems",
+        note: "Partially completed (Assignment)"
+    }      
   ];
   
