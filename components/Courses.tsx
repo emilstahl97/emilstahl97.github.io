@@ -44,7 +44,6 @@ export default function Courses() {
                   <CardContent>
                     <div className="space-y-2">
                       <p className="text-sm text-gray-500">Course Code: {course.code}</p>
-                      <p className="text-sm text-gray-500">Semester: {course.semester}</p>
                       <Badge variant="outline">{course.category}</Badge>
                     </div>
                   </CardContent>
