@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { useState } from 'react'
 import { courses } from '@/data/courses'
 
-type SortKey = 'grade' | 'category' | 'semester'
+type SortKey = 'grade' | 'category'
 
 export default function Courses() {
   const [ref, inView] = useInView({
@@ -16,7 +16,7 @@ export default function Courses() {
     threshold: 0.1,
   })
 
-  const [sortKey, setSortKey] = useState<SortKey>('semester')
+  const [sortKey, setSortKey] = useState<SortKey>('grade')
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc')
 
   const gradeOrder = ['A', 'B', 'C', 'D', 'E', 'P']
@@ -24,11 +24,8 @@ export default function Courses() {
   const sortedCourses = [...courses].sort((a, b) => {
     if (sortKey === 'grade') {
       return (gradeOrder.indexOf(a.grade) - gradeOrder.indexOf(b.grade)) * (sortOrder === 'asc' ? 1 : -1)
-    } else if (sortKey === 'category') {
-      return a.category.localeCompare(b.category) * (sortOrder === 'asc' ? 1 : -1)
     } else {
-      // Default sort by semester
-      return a.semester.localeCompare(b.semester) * (sortOrder === 'asc' ? 1 : -1)
+      return a.category.localeCompare(b.category) * (sortOrder === 'asc' ? 1 : -1)
     }
   })
 
@@ -67,12 +64,6 @@ export default function Courses() {
           >
             Sort by Category {sortKey === 'category' && (sortOrder === 'asc' ? '↑' : '↓')}
           </Button>
-          <Button
-            variant={sortKey === 'semester' ? 'default' : 'outline'}
-            onClick={() => handleSort('semester')}
-          >
-            Sort by Semester {sortKey === 'semester' && (sortOrder === 'asc' ? '↑' : '↓')}
-          </Button>
         </div>
 
         <div className="mt-10">
@@ -94,7 +85,6 @@ export default function Courses() {
                   <CardContent>
                     <div className="space-y-2">
                       <p className="text-sm text-gray-500">Course Code: {course.code}</p>
-                      <p className="text-sm text-gray-500">{course.semester}</p>
                       <Badge variant="outline">{course.category}</Badge>
                     </div>
                   </CardContent>
