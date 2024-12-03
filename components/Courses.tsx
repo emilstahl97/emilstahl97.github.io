@@ -17,7 +17,7 @@ export default function Courses() {
   })
 
   const [sortKey, setSortKey] = useState<SortKey>('grade')
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc')
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc')
 
   const gradeOrder = ['A', 'B', 'C', 'D', 'E', 'P']
 
