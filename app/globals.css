@@ -76,3 +76,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.header-border {
+  border-image: linear-gradient(to right, #3b82f6, #2dd4bf) 1;
+}
