@@ -57,8 +57,7 @@ export default function CoursePreview() {
                   </CardHeader>
                   <CardContent className="flex-grow flex flex-col justify-between">
                     <div>
-                      <p className="text-sm text-gray-500 mb-2">Course Code: {course.code}</p>
-                      <p className="text-sm text-gray-500 mb-4">{course.semester}</p>
+                      <p className="text-sm text-gray-500 mb-4">Course Code: {course.code}</p>
                     </div>
                     <Badge variant="outline" className="w-fit">
                       {course.category}
