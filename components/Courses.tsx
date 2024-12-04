@@ -51,7 +51,7 @@ export default function Courses() {
           </p>
         </div>
 
-        <div className="mt-6 flex justify-center gap-4">
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button
             variant={sortKey === 'grade' ? 'default' : 'outline'}
             onClick={() => handleSort('grade')}
@@ -67,15 +67,16 @@ export default function Courses() {
         </div>
 
         <div className="mt-10">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {sortedCourses.map((course, index) => (
               <motion.div
                 key={course.code}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className="w-full"
               >
-                <Card className="h-full flex flex-col transition-transform duration-300 hover:scale-105">
+                <Card className="h-full flex flex-col">
                   <CardHeader>
                     <CardTitle className="flex justify-between items-start gap-2">
                       <span className="text-lg font-bold">{course.name}</span>
