@@ -5,15 +5,25 @@ import { useInView } from 'react-intersection-observer'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { courses } from '@/data/courses'
 
 type SortKey = 'grade' | 'category'
 
 export default function Courses() {
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+    const handleResize = () => setIsMobile(window.innerWidth < 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
+    initialInView: isMobile
   })
 
   const [sortKey, setSortKey] = useState<SortKey>('grade')
@@ -72,7 +82,7 @@ export default function Courses() {
               <motion.div
                 key={course.code}
                 initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={isMobile || inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="w-full"
               >
