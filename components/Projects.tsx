@@ -12,7 +12,7 @@ const projects = [
     description: "Master's Thesis benchmarking the performance of Open vSwitch with perfect knowledge of future flows",
     image: "/images/ovs.png",
     tags: ["Master's Thesis", "Open vSwitch", "Python", "OpenShift", "XDP", "Networking"],
-    link: "https://github.com/emilstahl97/Open-vSwitch-with-Coflow-Aware-Prediction"
+    link: "/masters-thesis"
   },
   {
     title: "Performance Analysis of the FRRouting Route Server",
