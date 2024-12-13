@@ -28,8 +28,8 @@ export const mastersThesisContent = {
         affiliation: "Red Hat"
       }
     ],
-    pdfPath: "/documents/Improving_Megaflow_Cache_Performance_in_Open_vSwitch_with_Coflow-Aware_Branch_Prediction.pdf",
-    githubUrl: "https://raw.githubusercontent.com/emilstahl97/Open-vSwitch-with-Coflow-Aware-Prediction/main/thesis/Improving_Megaflow_Cache_Performance_in_Open_vSwitch_with_Coflow-Aware_Branch_Prediction.pdf",
+    pdfPath: "https://raw.githubusercontent.com/emilstahl97/Open-vSwitch-with-Coflow-Aware-Prediction/main/thesis/Improving_Megaflow_Cache_Performance_in_Open_vSwitch_with_Coflow-Aware_Branch_Prediction.pdf",
+    githubUrl: "https://github.com/emilstahl97/Open-vSwitch-with-Coflow-Aware-Prediction/blob/main/thesis/Improving_Megaflow_Cache_Performance_in_Open_vSwitch_with_Coflow-Aware_Branch_Prediction.pdf",
     sourceCodeUrl: "https://github.com/emilstahl97/Open-vSwitch-with-Coflow-Aware-Prediction",
     presentationVideoUrl: "https://www.youtube.com/embed/ddpIN-swy2w",
     presentationDescription: "Watch the presentation and defense of my master's thesis, originally presented on October 22, 2024.",
