@@ -1,5 +1,6 @@
 import React from 'react'
 import { mastersThesisContent } from './content'
+import ViewPDFButton from './ViewPDFButton'
 
 const DownloadButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
@@ -49,7 +50,7 @@ const RedHatGithubButton = ({ href }: { href: string }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 sm:px-6 py-2 sm:py-3 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center text-sm sm:text-base w-full sm:w-auto justify-center mb-2 sm:mb-0"
+    className="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center text-sm sm:text-base w-full sm:w-auto justify-center mb-2 sm:mb-0"
   >
     <img
       src="/images/Red_Hat_logo.svg.png"
@@ -57,37 +58,6 @@ const RedHatGithubButton = ({ href }: { href: string }) => (
       className="w-5 h-5 mr-2"
     />
     View on Red Hat GitHub
-  </a>
-)
-
-const ViewPDFButton = ({ href }: { href: string }) => (
-  <a
-    href={`https://docs.google.com/gview?url=${encodeURIComponent(href)}&embedded=true`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 sm:px-6 py-2 sm:py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center text-sm sm:text-base w-full sm:w-auto justify-center mb-2 sm:mb-0"
-  >
-    <svg
-      className="w-5 h-5 mr-2"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-      />
-    </svg>
-    View PDF
   </a>
 )
 

@@ -4,14 +4,10 @@ import React from 'react'
 
 const ViewPDFButton = ({ href }: { href: string }) => (
   <a
-    href={href}
+    href={`https://docs.google.com/gview?url=${encodeURIComponent(href)}&embedded=true`}
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 sm:px-6 py-2 sm:py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center text-sm sm:text-base w-full sm:w-auto justify-center mb-2 sm:mb-0"
-    onClick={(e) => {
-      e.preventDefault();
-      window.open(href, '_blank');
-    }}
+    className="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center text-sm sm:text-base w-full sm:w-auto justify-center mb-2 sm:mb-0"
   >
     <svg
       className="w-5 h-5 mr-2"
