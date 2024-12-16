@@ -89,7 +89,7 @@ export default function MastersThesis() {
           <DownloadButton href={mastersThesisContent.thesis.pdfPath}>
             Download Thesis
           </DownloadButton>
-          <ViewPDFButton href={mastersThesisContent.thesis.pdfPath} />
+          <ViewPDFButton href={mastersThesisContent.thesis.pdfPath} type="thesis" />
           <GithubButton href={mastersThesisContent.thesis.sourceCodeUrl} />
           <RedHatGithubButton href={mastersThesisContent.thesis.redHatGithubUrl} />
         </div>
@@ -138,7 +138,7 @@ export default function MastersThesis() {
           <DownloadButton href={mastersThesisContent.paper.pdfPath}>
             Download Paper
           </DownloadButton>
-          <ViewPDFButton href={mastersThesisContent.paper.pdfPath} />
+          <ViewPDFButton href={mastersThesisContent.paper.pdfPath} type="paper" />
           <GithubButton href={mastersThesisContent.paper.sourceCodeUrl} />
           <RedHatGithubButton href={mastersThesisContent.paper.redHatGithubUrl} />
         </div>
